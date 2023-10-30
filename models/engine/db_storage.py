@@ -82,7 +82,7 @@ class DBStorage:
         if id and type(id) is str:
             obj = self.__session.query(classes[cls]).get(id)
         return (obj)
-    
+
     def count(self, cls=None):
         """
         Function Docs
