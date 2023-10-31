@@ -87,9 +87,4 @@ class DBStorage:
         """
         Function Docs
         """
-        total_count = 0
-        for clss in classes:
-            if cls is None or cls is classes[clss] or cls is clss:
-                count_all = self.__session.query(classes[clss]).count()
-                total_count += count_all
-        return (total_count)
+        return (len(self.all(cls)))
