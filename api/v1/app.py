@@ -32,9 +32,9 @@ def error(error):
 
 
 app.config['SWAGGER'] = {
-    'title': 'AirBnB clone Restful API',
-    'uiversion': 3
-}
+        'title': 'AirBnB clone Restful API',
+        'uiversion': 3
+        }
 
 Swagger(app)
 
