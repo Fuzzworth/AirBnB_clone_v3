@@ -79,9 +79,10 @@ class DBStorage:
         """
         Function Docs
         """
-        if id and type(id) is str:
-            obj = self.__session.query(classes[cls]).get(id)
-        return (obj)
+        for element in self.all(cls).values():
+            if id == element.id:
+                return element
+        return
 
     def count(self, cls=None):
         """
